@@ -1,4 +1,5 @@
 import "./App.css";
+import PostCard from "./components/PostCard";
 import { useGetPostQuery } from "./data/services/post";
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
       ) : error ? (
         <div>Error</div>
       ) : (
-        data.map((post) => <p key={post.title}>{post.title}</p>)
+        data.map((post) => <PostCard key={post.id} {...post} />)
       )}
     </>
   );

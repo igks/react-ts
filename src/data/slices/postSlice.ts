@@ -1,19 +1,14 @@
 import { createSlice } from '@reduxjs/toolkit'
+import {Post} from '../../models/post';
 
-export interface PostSlice {
-  title: string
-}
-
-const initialState: PostSlice = {
-  title: ""
-}
+const initialState: Post[] = [];
 
 export const postSlice = createSlice({
   name: 'post',
   initialState,
   reducers: {
     updatePost: (state) => {
-      state.title = "Update"
+      state = []
     },
   },
 })
